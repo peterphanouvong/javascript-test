@@ -22,13 +22,28 @@
 
 
    If we are using the useState hook, then you have to use the setter function to change the state.
-   e.g. ```const [counter, setCounter] = useState(0)
+   e.g. 
+```
+   const [counter, setCounter] = useState(0)
 
 const incrementCounter = () => {
 setCounter(counter+1) // this is where the counter in state gets updated
-}```
+}
+```
 
 5. Could you explain the life-cycle of a react component?
+
+React components go through these stages:
+
+Mounting - this is when the component gets added to the DOM.
+
+Updating - this is when the component updates in correspondence with the state and props.
+
+Unmounting - this is when the component is removed from the DOM.
+
+Each stage have lifecycle methods that can be used for further (timely) manipulation.
+
+
 
 6. What is fragment in react?
 
@@ -53,7 +68,8 @@ setCounter(counter+1) // this is where the counter in state gets updated
    You can pass a function to a component as a prop
 
 i.e.
-```const addTodo = () => {
+```
+const addTodo = () => {
 ...
 }
 <TodoList addTodo={addTodo}> 
